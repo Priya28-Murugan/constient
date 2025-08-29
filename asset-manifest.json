@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/constient/static/css/main.57647aed.css",
+    "main.js": "/constient/static/js/main.6a93ad20.js",
+    "static/media/visualDesign.svg": "/constient/static/media/visualDesign.59d757f8d80b5d1cc4919927a835b9bb.svg",
+    "static/media/designThinkingProject.svg": "/constient/static/media/designThinkingProject.5fbd9cab9365541729876c61138d8e7d.svg",
+    "static/media/curosityTech.svg": "/constient/static/media/curosityTech.07cdc6d6c36cf58d113f429857d3f1b1.svg",
+    "static/media/colorStyles.svg": "/constient/static/media/colorStyles.64a6bfc16decb35800cf2e940a7bd716.svg",
+    "static/media/performance.svg": "/constient/static/media/performance.32c03d014f2df3a85cea13510aed930f.svg",
+    "static/media/hoursSpent.svg": "/constient/static/media/hoursSpent.ae5ebddca0e19db4f8bcaa55dab9ce87.svg",
+    "static/media/visualDesignIcon.svg": "/constient/static/media/visualDesignIcon.e78396804529705f36f200794ff53e26.svg",
+    "static/media/profile.svg": "/constient/static/media/profile.bbc874dd45ec85ce75c4a9d157c036e9.svg",
+    "static/media/png.svg": "/constient/static/media/png.5820b9b1706b0d9aa1ec704b37b2b7f4.svg",
+    "static/media/jpeg.svg": "/constient/static/media/jpeg.0f66bce990af941bf1b23ce4260fa262.svg",
+    "static/media/logo.svg": "/constient/static/media/logo.9b0bfdd096ab7ec3b7999e42b61394a7.svg",
+    "static/media/edit.svg": "/constient/static/media/edit.e6ca24e05f5141e5535f0978fac16b70.svg",
+    "static/media/pdf.svg": "/constient/static/media/pdf.178bf3af2598e865cfe75adc78301f43.svg",
+    "static/media/graduation.svg": "/constient/static/media/graduation.d53ac1cc02cfcb547e85bfd49f9b04c9.svg",
+    "static/media/userExp.svg": "/constient/static/media/userExp.b7d3466e476f2e3dfe0c467b5feab435.svg",
+    "index.html": "/constient/index.html",
+    "static/media/checked.svg": "/constient/static/media/checked.a2a0e1b59d4062184510adf1113a0367.svg",
+    "main.57647aed.css.map": "/constient/static/css/main.57647aed.css.map",
+    "main.6a93ad20.js.map": "/constient/static/js/main.6a93ad20.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57647aed.css",
+    "static/js/main.6a93ad20.js"
+  ]
+}
