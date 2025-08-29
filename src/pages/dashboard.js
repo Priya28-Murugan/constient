@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Progress } from "antd";
+import { DatePicker, Progress } from "antd";
 import { Calendar } from "antd";
 import pdf from "../assests/pdf.svg";
 import png from "../assests/png.svg";
@@ -18,6 +18,8 @@ import {
 } from "@ant-design/icons";
 
 const Dashboard = () => {
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
   const [items, setItems] = useState([
     {
       id: 1,
@@ -86,6 +88,53 @@ const Dashboard = () => {
       duration: "4.30pm",
     },
   ];
+
+  const onSelect = (date) => {
+    if (!startDate || (startDate && endDate)) {
+      setStartDate(date);
+      setEndDate(null);
+    } else {
+      if (date.isBefore(startDate)) {
+        setEndDate(startDate);
+        setStartDate(date);
+      } else {
+        setEndDate(date);
+      }
+    }
+  };
+
+  const dateFullCellRender = (value) => {
+    let style = {};
+    if (startDate && value.isSame(startDate, "day")) {
+      style = {
+        backgroundColor: "#1890ff",
+        color: "#fff",
+        borderRadius: "50%",
+      };
+    }
+    if (
+      startDate &&
+      endDate &&
+      value.isAfter(startDate, "day") &&
+      value.isBefore(endDate, "day")
+    ) {
+      style = { backgroundColor: "#bae7ff", borderRadius: "50%" };
+    }
+    if (endDate && value.isSame(endDate, "day")) {
+      style = {
+        backgroundColor: "#1890ff",
+        color: "#fff",
+        borderRadius: "50%",
+      };
+    }
+    return (
+      <div
+        style={{ ...style, width: "100%", height: "100%", textAlign: "center" }}
+      >
+        {value.date()}
+      </div>
+    );
+  };
 
   return (
     <div>
@@ -174,8 +223,16 @@ const Dashboard = () => {
           </button>
         </div>
 
-        <div className="bg-white rounded-2xl shadow  flex-1">
-          <Calendar fullscreen={false} />
+        <div className="bg-white rounded-2xl shadow  flex-1 p-3">
+          <Calendar
+            fullscreen={false}
+            onSelect={onSelect}
+            dateFullCellRender={dateFullCellRender}
+          />
+          <p className="">
+            Selected Range: {startDate ? startDate.format("YYYY-MM-DD") : "-"}{" "}
+            {endDate ? " → " + endDate.format("YYYY-MM-DD") : ""}
+          </p>
         </div>
       </div>
       <div className="flex space-x-6 items-stretch pt-8">
